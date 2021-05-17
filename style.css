@@ -1,0 +1,136 @@
+:root{
+    --dark-blue: hsl(234, 12%, 34%);
+    --medium-blue: hsl(229, 6%, 66%);
+    --light-gray: hsl(0, 0%, 98%);
+    --shadow: 0px 10px 20px 0px rgba(0,0,0,0.2);
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Poppins', 'Sans serif';
+    line-height: 1.4;
+    font-size: 15px;
+}
+#first-heading{
+    font-weight: 400;
+}
+#second-heading{
+    font-weight: 600;
+}
+h1{
+    text-align: center;
+    color: var(--dark-blue);
+}
+
+.heading{
+    margin: 100px auto 20px auto;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content p{
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 375px;
+    color: var(--medium-blue);
+}
+
+.wrapper{
+    padding: 0 30px;
+    margin: 5rem auto;
+}
+.card{
+    margin-top: 30px;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+.card-1{
+    border-top: 5px solid hsl(180, 62%, 55%);
+}
+.card-2{
+    border-top: 5px solid hsl(0, 78%, 62%);
+}
+.card-3{
+    border-top: 5px solid hsl(34, 97%, 64%);
+}
+.card-4{
+    border-top: 5px solid hsl(212, 86%, 64%);
+}
+
+
+.card h2{
+    color: var(--dark-blue);
+    margin-bottom: 30px;
+}
+
+.card p{
+    color: var(--medium-blue);
+    margin-bottom: 80px;
+}
+
+.card .icon img{
+    margin-left: 75%;
+}
+
+.attribution{ 
+    font-size: 15px;
+    text-align: center;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+.attribution a{
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media only screen and (min-width: 800px){
+
+    .heading{
+        margin: 50px auto 20px auto;
+    }
+    .content p{
+        max-width: 650px;
+        margin-bottom: 20px;
+    }
+    .wrapper{
+        max-width: 1440px;
+        margin: 40px auto;
+    }
+  .container{
+    display: grid;  grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "card-1 card-2 card-4"
+    'card-1 card-3 card-4';
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .card-1{
+        grid-area: card-1;
+    }
+    .card-2{
+        grid-area: card-2;
+    }
+    .card-3{
+        grid-area: card-3;
+    }
+    .card-4{
+        grid-area: card-4;
+    }
+
+    .card{
+        margin-top: 0;
+    }
+
+}
